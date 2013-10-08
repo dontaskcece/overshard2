@@ -1,0 +1,12 @@
+{% extends "frontend/layout.html" %}
+
+
+{%block body%}
+<ol>
+{%for c in content%}
+<li>
+{{c.content}}    <a href="{{url_for("news.delete",id=c.id)}}">del</a>
+</li>
+{%endfor%}
+</ol>
+{%endblock%}
